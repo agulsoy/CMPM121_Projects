@@ -14,7 +14,7 @@ public class ImgControl : MonoBehaviour
     void Start()
     {
         //Find the game objects and get the image component
-        img1 = GameObject.Find("Find").GetComponent<Image>();
+        img1 = GameObject.Find("FirstUI").GetComponent<Image>();
 
         //default to stage 1 being rendered
         img1.enabled = false;

@@ -10,7 +10,7 @@ public class First_Inv_Col : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        word = GameObject.Find("Find");
+        word = GameObject.Find("FirstUI");
     }
 
     // Update is called once per frame
