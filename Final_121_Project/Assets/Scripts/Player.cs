@@ -7,7 +7,6 @@ public class Player : MonoBehaviour
     // public CameraTrigger trig;
     public float speed = 1.0f;
     public float rotateSpeed = 1.0f;
-    public float jumpSpeed = 10.0f;
     public float gravity = 20.0f;
     //public Collider collider;
     public Inventory2 inventory;
@@ -36,18 +35,14 @@ public class Player : MonoBehaviour
 
         
 
-            this.rotation = new Vector3(0, Input.GetAxisRaw("Horizontal") * rotateSpeed * Time.deltaTime, 0);
+        this.rotation = new Vector3(0, Input.GetAxisRaw("Horizontal") * rotateSpeed * Time.deltaTime, 0);
 
-            this.move = new Vector3(0, 0, Input.GetAxisRaw("Vertical") * Time.deltaTime);
-            move = transform.TransformDirection(move);
+        this.move = new Vector3(0, 0, Input.GetAxisRaw("Vertical") * Time.deltaTime);
+        move = transform.TransformDirection(move);
 
-            if (Input.GetButton("Jump"))
-            {
-                move.y = jumpSpeed;
-            }
 
-        character_controller.Move(move * speed);
-        this.transform.Rotate(this.rotation);
+            character_controller.Move(move * speed);
+            this.transform.Rotate(this.rotation);
         
         /*CharacterController character_controller = this.GetComponent<CharacterController>();
 
