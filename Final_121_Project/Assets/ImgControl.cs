@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 //using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class IndicatorControl : MonoBehaviour
+public class ImgControl : MonoBehaviour
 {
     //substitute this with the variable for the stage when it is implemented
     public float stage = 1.0f;
@@ -13,17 +14,16 @@ public class IndicatorControl : MonoBehaviour
     void Start()
     {
         //Find the game objects and get the image component
-        img1 = GameObject.Find("ItemImage100").GetComponent<Image>();
+        img1 = GameObject.Find("Find").GetComponent<Image>();
 
         //default to stage 1 being rendered
         img1.enabled = true;
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if we are at the first stage enable the image, else disable it
+        //if we are at the first stage enable the image, else disable it 
         if (stage == 1.0f)
         {
             img1.enabled = true;
