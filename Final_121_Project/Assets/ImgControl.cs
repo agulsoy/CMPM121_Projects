@@ -36,7 +36,7 @@ public class ImgControl : MonoBehaviour
     }
     */
 
-    void P_up()
+    void P_up1()
     {
         img1.enabled = true;
     }
