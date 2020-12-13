@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class WordWarp : MonoBehaviour
 {
 	bool wasPickedUp = false;
+    private GameObject word;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        word = GameObject.Find("Find");
     }
 
     // Update is called once per frame
@@ -25,9 +27,10 @@ public class WordWarp : MonoBehaviour
     void OnTriggerEnter(Collider collider) {
     
     	if(collider.gameObject.CompareTag("Player")){
-    		
-    		//ScoreScript.coinAmount += 1;
-    		Object.Destroy(this.gameObject, 0.3f);
+
+            word.SendMessage("P_up");
+            //ScoreScript.coinAmount += 1;
+            Object.Destroy(this.gameObject, 0.3f);
     		this.wasPickedUp = true;
     	}
     }

@@ -17,10 +17,11 @@ public class ImgControl : MonoBehaviour
         img1 = GameObject.Find("Find").GetComponent<Image>();
 
         //default to stage 1 being rendered
-        img1.enabled = true;
+        img1.enabled = false;
     }
 
     // Update is called once per frame
+    /*
     void Update()
     {
         //if we are at the first stage enable the image, else disable it 
@@ -32,5 +33,11 @@ public class ImgControl : MonoBehaviour
         {
             img1.enabled = false;
         }
+    }
+    */
+
+    void P_up()
+    {
+        img1.enabled = true;
     }
 }
