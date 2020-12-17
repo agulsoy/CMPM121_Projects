@@ -5,8 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitch : MonoBehaviour
 {
+    public static int activate;
+
     void OnTriggerEnter(Collider collider)
     {
-        SceneManager.LoadScene(2);
+        if (activate.Equals(1))
+        {
+            SceneManager.LoadScene(3);
+        }
+        else
+        {
+            SceneManager.LoadScene(2);
+        }
+    }
+
+    void Update()
+    {
+        activate = ImgControl.activated;
+        Debug.Log("activate's value " + activate);
     }
 }
