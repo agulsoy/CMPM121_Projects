@@ -2,6 +2,7 @@
 //using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ImgControl : MonoBehaviour
 {
@@ -14,10 +15,13 @@ public class ImgControl : MonoBehaviour
     public Image img4;
     public Image img5;
     public Image img6;
+    public static int activated;
+    public Inventory2 inventory;
 
     // Start is called before the first frame update
     void Start()
     {
+        activated = 0;
         //Find the game objects and get the image component
         img1 = GameObject.Find("FirstUI").GetComponent<Image>();
         img2 = GameObject.Find("YouUI").GetComponent<Image>();
@@ -36,20 +40,16 @@ public class ImgControl : MonoBehaviour
     }
 
     // Update is called once per frame
-    /*
+
     void Update()
     {
         //if we are at the first stage enable the image, else disable it 
-        if (stage == 1.0f)
+        if ((img1.enabled == true) && (img2.enabled == true) && (img3.enabled == true) && (img4.enabled == true) && (img5.enabled == true) && (img6.enabled == true))
         {
-            img1.enabled = true;
-        }
-        else
-        {
-            img1.enabled = false;
+            activated = 1;
         }
     }
-    */
+
 
     void P_up1()
     {
@@ -80,4 +80,13 @@ public class ImgControl : MonoBehaviour
     {
         img6.enabled = true;
     }
+
+    /*void OnTriggerEnter(Collider collider)
+    {
+        if (img1.enabled == true)
+        {
+            SceneManager.LoadScene(3);
+        }
+        SceneManager.LoadScene(2);
+    }*/
 }

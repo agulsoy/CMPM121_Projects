@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.Experimental.Input;
 
 public class Player : MonoBehaviour
 {
@@ -41,8 +42,8 @@ public class Player : MonoBehaviour
         move = transform.TransformDirection(move);
 
 
-            character_controller.Move(move * speed);
-            this.transform.Rotate(this.rotation);
+        character_controller.Move(move * speed);
+        this.transform.Rotate(this.rotation);
         
         /*CharacterController character_controller = this.GetComponent<CharacterController>();
 
