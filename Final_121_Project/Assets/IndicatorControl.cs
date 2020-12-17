@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 //using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +13,7 @@ public class IndicatorControl : MonoBehaviour
     void Start()
     {
         //Find the game objects and get the image component
-        img1 = GameObject.Find("ItemImage100").GetComponent<Image>();
+        img1 = GameObject.Find("ItemImage100").GetComponent<Image>();   
 
         //default to stage 1 being rendered
         img1.enabled = true;
@@ -33,4 +33,4 @@ public class IndicatorControl : MonoBehaviour
             img1.enabled = false;
         }
     }
-}
+}*/
