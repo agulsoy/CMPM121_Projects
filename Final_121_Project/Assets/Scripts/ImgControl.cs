@@ -17,10 +17,12 @@ public class ImgControl : MonoBehaviour
     public Image img6;
     public static int activated;
     public Inventory2 inventory;
+    private GameObject door;
 
     // Start is called before the first frame update
     void Start()
     {
+        door = GameObject.Find("Door");
         activated = 0;
         //Find the game objects and get the image component
         img1 = GameObject.Find("FirstUI").GetComponent<Image>();
@@ -47,6 +49,7 @@ public class ImgControl : MonoBehaviour
         if ((img1.enabled == true) && (img2.enabled == true) && (img3.enabled == true) && (img4.enabled == true) && (img5.enabled == true) && (img6.enabled == true))
         {
             activated = 1;
+            door.SendMessage("Open");
         }
     }
 
