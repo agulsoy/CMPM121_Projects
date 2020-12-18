@@ -7,12 +7,15 @@ public class Me_Inv_Col : MonoBehaviour
 {
     private GameObject word;
     private GameObject door;
+    private GameObject notice;
 
     // Start is called before the first frame update
     void Start()
     {
         door = GameObject.Find("MeDoor");
         word = GameObject.Find("MeUI");
+        notice = GameObject.Find("ShiftedMazeNotice");
+
     }
 
     // Update is called once per frame
@@ -28,6 +31,7 @@ public class Me_Inv_Col : MonoBehaviour
 
             word.SendMessage("P_up6");
             door.SendMessage("OpenOne");
+            notice.SendMessage("AlertOne");
         }
     }
 }

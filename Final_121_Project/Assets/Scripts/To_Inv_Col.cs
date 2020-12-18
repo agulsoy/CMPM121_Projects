@@ -5,14 +5,16 @@ using UnityEngine.UI;
 
 public class To_Inv_Col : MonoBehaviour
 {
-    private GameObject word4;
+    private GameObject word;
     private GameObject door;
+    private GameObject notice;
 
     // Start is called before the first frame update
     void Start()
     {
         door = GameObject.Find("ToDoor");
-        word4 = GameObject.Find("ToUI");
+        word = GameObject.Find("ToUI");
+        notice = GameObject.Find("ShiftedMazeNotice");
     }
 
     // Update is called once per frame
@@ -25,8 +27,9 @@ public class To_Inv_Col : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Player"))
         {
-            word4.SendMessage("P_up4");
+            word.SendMessage("P_up4");
             door.SendMessage("OpenTwo");
+            notice.SendMessage("AlertOne");
         }
     }
 }
